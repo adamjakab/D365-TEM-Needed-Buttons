@@ -4,6 +4,7 @@
  * @description TEM Needed Button Code for CRM Lead Form
  * 
  * resource: "Lead - TEM Needed Button" (new_lead_form_tem_needed_button)
+ * 
 **/
 
 const button_text = "TEM Needed Request"
@@ -33,6 +34,12 @@ const getUIAttachToElement = function() {
     return $(ui_element_query)[0];
 }
 
+/**
+ * Verify if the current lead is already qualified
+ */
+const isLeadAlreadyQualified = function() {
+    return false;
+}
 
 function injectTemNeededButton(executionContext) {
     const formContext = executionContext.getFormContext()
